@@ -1159,13 +1159,57 @@
             <h2 class="section-title">Featured <span>Projects</span></h2>
         </div>
         <div class="projects-grid">
+                <div class="project-card">
+                <div class="project-image">☁️</div>
+                <div class="project-content">
+                    <h3>Active Directory to Cloud Security Data Pipeline</h3>
+                    <p>Developed an automated, end to end cloud security data pipeline as part of a 5-person 
+capstone team sponsored by Cybriant, a managed security services provider. The pipeline 
+extract’s identity and asset data from an on premises Active Directory environment and 
+automatically visualizes it as security diagrams in Lucid without any manual intervention.
+
+My responsibilities included designing and implementing the Google Cloud Run service 
+using Python and Flask, which queries Big Query for the latest Active Directory snapshot 
+and transforms relational identity data into a graph-based node edge format. The service 
+then packages the data as a. lucid zip file and submits it to the Lucid Import REST API, 
+automatically generating security diagrams showing users, groups, computers, and their 
+relationships.
+
+I also developed the Google Cloud Function that triggers automatically when PowerShell 
+CSV exports land in Google Cloud Storage, loading 6 AD object types (users, groups, 
+group memberships, computers, DNS records, DHCP leases) into structured Big Query tables 
+across 500+ records per table.
+
+The full pipeline runs without any manual steps. PowerShell extracts AD data, uploads 
+to GCS, Cloud Function ingests into Big Query, Cloud Run transforms and pushes to Lucid. 
+Delivered across 3 milestones logging 160+ combined team hours over an 8-week 
+development cycle.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Google Cloud Platform</span>
+                        <span>Docker</span>
+                        <span>REST APIs</span>
+                        <span>Flask</span>
+                        <span>Powershell</span>
+                        <span>Active Directory</span>
+                    </div>
+                </div>
+            </div>
             <div class="project-card">
                 <div class="project-image">🚗</div>
                 <div class="project-content">
                     <h3>Student Car Guide</h3>
-                    <p>A comprehensive website designed to help students find affordable and fuel-efficient commuter cars. Features responsive design, car comparisons across body styles, and a MySQL-backed form system.</p>
+                    <p>Designed and built a full stack web application to help fellow Kennesaw State students find affordable, fuel-efficient commuter cars, addressing a common issue for
+students shopping for their first vehicle on a limited budget. The site allows users to compare multiple car models side-by-side across different body
+styles (sedans, hatchbacks, SUVs), with detailed descriptions, images, and specs for each
+model to support informed decision-making. I designed a responsive front-end layout that adapts cleanly between desktop and mobile
+viewports, ensuring the tool was equally usable whether a student was browsing on a
+laptop or checking listings on their phone between classes. On the back end, I built a MySQL backed form to collect and store user input, allowing
+the site to capture preferences and feedback directly into a structured database rather
+than relying on static content. After an initial launch, I gathered feedback from peers and iterated on the site's layout and content presentation, refining the UI to make comparisons easier to scan and reducing friction in the browsing experience.</p>
                     <div class="project-tech">
-                        <span>HTML/CSS</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
                         <span>JavaScript</span>
                         <span>MySQL</span>
                         <span>Responsive Design</span>
@@ -1176,11 +1220,22 @@
                 <div class="project-image">📚</div>
                 <div class="project-content">
                     <h3>Course Picking Tool</h3>
-                    <p>A Java application that automates math placement for incoming KSU students. Implements a rules-based placement system to reduce manual sorting and ensure accurate course assignments.</p>
+                    <p>Built a Java application to automate math course placement for incoming
+Kennesaw State University students, replacing a manual, advisor driven sorting process
+with a rules-based system. The tool takes in a student's academic input criteria (such as prior coursework, test
+scores, or placement data) and applies a set of predefined placement rules to
+automatically match students to the appropriate entry-level math course, removing
+guesswork from the process. I designed the underlying logic to map course prerequisites and requirements against
+each student's input, ensuring placements were consistent and accurate across a range of
+student profiles rather than relying on case-by-case manual review. By automating this step, the tool meaningfully reduced the manual sorting workload for
+academic staff during peak advising periods, while giving students a faster, more
+consistent placement outcome.</p>
                     <div class="project-tech">
                         <span>Java</span>
-                        <span>IntelliJ</span>
-                        <span>Automation</span>
+                        <span>Object Oriented Programming</span>
+                        <span>Problem Solving</span>
+                        <span>Software Development</span>
+                        <span>Algorithm Design</span>
                     </div>
                 </div>
             </div>
