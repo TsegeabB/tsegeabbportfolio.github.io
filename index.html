@@ -180,15 +180,15 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 8rem 2rem 4rem;
+            padding: clamp(6rem, 15vw, 8rem) clamp(1rem, 4vw, 2rem) clamp(2rem, 6vw, 4rem);
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: clamp(2rem, 5vw, 4rem);
             align-items: center;
             width: 100%;
         }
@@ -361,7 +361,7 @@
 
         /* Section Styling */
         section {
-            padding: 6rem 2rem;
+            padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 2rem);
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -394,14 +394,14 @@
         #about {
             background: var(--bg-secondary);
             border-radius: 24px;
-            margin: 0 2rem;
+            margin: 0 clamp(0.5rem, 3vw, 2rem);
             max-width: calc(1400px - 4rem);
         }
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: clamp(1.5rem, 4vw, 3rem);
             align-items: center;
         }
 
@@ -432,7 +432,7 @@
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
             font-weight: 700;
             background: var(--gradient-1);
             -webkit-background-clip: text;
@@ -820,10 +820,6 @@
 
         /* Mobile Responsive */
         @media (max-width: 968px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
 
             .hero-text {
                 order: 1;
@@ -841,10 +837,6 @@
                 justify-content: center;
             }
 
-            .about-content {
-                grid-template-columns: 1fr 1.5fr 1fr;
-            }
-
             .education-card {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -852,10 +844,6 @@
 
             .edu-icon {
                 margin: 0 auto;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -881,20 +869,8 @@
                 display: flex;
             }
 
-            #about {
-                margin: 0 1rem;
-            }
-
-            .timeline::before {
-                left: 6px;
-            }
-
             .timeline-item {
-                padding-left: 2.5rem;
-            }
-
-            .timeline-item::before {
-                left: 0;
+                padding-left: clamp(2rem, 6vw, 3rem);
             }
         }
 
@@ -1006,7 +982,7 @@
                         <span class="terminal-output">&nbsp;&nbsp;<span class="terminal-key">"location"</span>: <span class="terminal-value">"Snellville, GA"</span>,</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">&nbsp;&nbsp;<span class="terminal-key">"gpa"</span>: <span class="terminal-value">3.66</span>,</span>
+                        <span class="terminal-output">&nbsp;&nbsp;<span class="terminal-key">"gpa"</span>: <span class="terminal-value">3.62</span>,</span>
                     </div>
                     <div class="terminal-line">
                         <span class="terminal-output">&nbsp;&nbsp;<span class="terminal-key">"status"</span>: <span class="terminal-value">"Open to opportunities"</span></span>
@@ -1035,7 +1011,7 @@
             </div>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">3.66</div>
+                    <div class="stat-number">3.62</div>
                     <div class="stat-label">GPA</div>
                 </div>
                 <div class="stat-card">
@@ -1082,6 +1058,17 @@
                 </div>
             </div>
             <div class="skill-category">
+            <div class="skill-icon">☁️</div>
+                <h3>Cloud & DevOps</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Google Cloud Run</span>
+                    <span class="skill-tag">Cloud Functions</span>
+                    <span class="skill-tag">BigQuery</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Flask</span>
+                </div>
+            </div>
+            <div class="skill-category">
                 <div class="skill-icon">🔒</div>
                 <h3>IT & Security</h3>
                 <div class="skill-tags">
@@ -1102,6 +1089,15 @@
                     <span class="skill-tag">Creativity</span>
                 </div>
             </div>
+            <div class="skill-category">
+                <div class="skill-icon">🌐</div>
+                <h3>Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">English</span>
+                    <span class="skill-tag">Amharic</span>
+                    <span class="skill-tag">Hadiyya</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1112,10 +1108,10 @@
         </div>
         <div class="timeline">
             <div class="timeline-item">
-                <span class="timeline-date">May 2025 – Present</span>
+                <span class="timeline-date">May 2025 – December 2025</span>
                 <div class="timeline-content">
                     <h3>Fulfillment Center Warehouse Associate</h3>
-                    <h4>Amazon • Peachtree Corners, GA</h4>
+                    <h4>Amazon • Norcross, GA</h4>
                     <ul>
                         <li>Scanned and packed 1,200+ units, consistently exceeding productivity goals by 15–20%</li>
                         <li>Maintained 99.8% order accuracy, ensuring customer satisfaction</li>
@@ -1255,13 +1251,13 @@ consistent placement outcome.</p>
             </div>
             <div class="cert-card">
                 <div class="cert-badge">🖥️</div>
-                <h4>CompTIA PC Pro</h4>
-                <p>CompTIA</p>
+                <h4>TestOut PC Pro</h4>
+                <p>TestOut</p>
             </div>
             <div class="cert-card">
                 <div class="cert-badge">⚙️</div>
-                <h4>CompTIA IT Fundamentals Pro</h4>
-                <p>CompTIA</p>
+                <h4>TestOut IT Fundamentals Pro</h4>
+                <p>TestOut</p>
             </div>
             <div class="cert-card">
                 <div class="cert-badge">📊</div>
@@ -1282,9 +1278,10 @@ consistent placement outcome.</p>
                 <h3>Bachelor of Science in Information Technology</h3>
                 <h4>Kennesaw State University</h4>
                 <p>Marietta, GA</p>
-                <p>August 15, 2022 - May 04, 2026</p>
+                <p>August 15, 2022 - May 15, 2026</p>
                 <div class="edu-highlights">
                     <span class="edu-highlight">GPA: 3.62/4.0</span>
+                    <span class="edu-highlight">Cum Laude</span>
                     <span class="edu-highlight">President’s List: Spring 2024, Fall 2024</span>
                     <span class="edu-highlight">Dean’s List: Fall 2023, Spring 2025, Spring 2026</span>
                 </div>
@@ -1317,7 +1314,7 @@ consistent placement outcome.</p>
     </section>
 
     <footer>
-        <p>• 2026</p>
+        <p>Designed & Built by <span>Tsegeab Binchamo</span> • 2026</p>
     </footer>
 
     <script>
