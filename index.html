@@ -1192,23 +1192,20 @@ development cycle.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image">🚗</div>
+                <div class="project-image">📍</div>
                 <div class="project-content">
-                    <h3>Student Car Guide</h3>
-                    <p>Designed and built a full stack web application to help fellow Kennesaw State students find affordable, fuel-efficient commuter cars, addressing a common issue for
-students shopping for their first vehicle on a limited budget. The site allows users to compare multiple car models side-by-side across different body
-styles (sedans, hatchbacks, SUVs), with detailed descriptions, images, and specs for each
-model to support informed decision-making. I designed a responsive front-end layout that adapts cleanly between desktop and mobile
-viewports, ensuring the tool was equally usable whether a student was browsing on a
-laptop or checking listings on their phone between classes. On the back end, I built a MySQL backed form to collect and store user input, allowing
-the site to capture preferences and feedback directly into a structured database rather
-than relying on static content. After an initial launch, I gathered feedback from peers and iterated on the site's layout and content presentation, refining the UI to make comparisons easier to scan and reducing friction in the browsing experience.</p>
+                    <h3>Self hosted GPS tracking server</h3>
+                    <p> Deployed and self-hosted a Traccar GPS tracking server on a Google Cloud Compute Engine VM, building a private, fully owned alternative to paid tracking subscriptions. Configured Caddy as a reverse proxy in front of Traccar to handle automatic HTTPS certificate issuance and renewal and set up DuckDNS for dynamic DNS so the server stays reachable at a stable hostname regardless of changes to the VM's public IP. Linked the platform with a SinoTrack ST901L GPS tracker communicating over the H02 protocol, with the server configured to filter out noisy or duplicate GPS pings using accuracy, distance, and speed thresholds so only reliable position data is stored. 
+                        Enabled reverse geocoding to resolve coordinates into human readable addresses, integrated an external speed limit API to trigger overspeed events, and configured trip and parking detection logic to turn raw location pings into meaningful history. Hardened the server with TOTP based two factor authentication, strict cookie policies, and disabled public share links, and setup multichannel alerting (web, email, and Telegram) so events are triggered immediately. The result is an end to end, self-managed GPS tracking stack, from the physical hardware transmitting location pings to a secured, HTTPS-protected server turning that data into useful insights. </p>
                     <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>MySQL</span>
-                        <span>Responsive Design</span>
+                        <span>Traccar</span>
+                        <span>Google Cloud Platform</span>
+                        <span>Caddy</span>
+                        <span>DuckDNS</span>
+                        <span>Linux</span>
+                        <span>Networking</span>
+                        <span>GPS/IoT</span>
+                        <span>System Security</span>
                     </div>
                 </div>
             </div>
@@ -1232,6 +1229,27 @@ consistent placement outcome.</p>
                         <span>Problem Solving</span>
                         <span>Software Development</span>
                         <span>Algorithm Design</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🚗</div>
+                <div class="project-content">
+                    <h3>Student Car Guide</h3>
+                    <p>Designed and built a full stack web application to help fellow Kennesaw State students find affordable, fuel-efficient commuter cars, addressing a common issue for
+students shopping for their first vehicle on a limited budget. The site allows users to compare multiple car models side-by-side across different body
+styles (sedans, hatchbacks, SUVs), with detailed descriptions, images, and specs for each
+model to support informed decision-making. I designed a responsive front-end layout that adapts cleanly between desktop and mobile
+viewports, ensuring the tool was equally usable whether a student was browsing on a
+laptop or checking listings on their phone between classes. On the back end, I built a MySQL backed form to collect and store user input, allowing
+the site to capture preferences and feedback directly into a structured database rather
+than relying on static content. After an initial launch, I gathered feedback from peers and iterated on the site's layout and content presentation, refining the UI to make comparisons easier to scan and reducing friction in the browsing experience.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>MySQL</span>
+                        <span>Responsive Design</span>
                     </div>
                 </div>
             </div>
